@@ -1,0 +1,17 @@
+C:\Users\davilladiego\Documents\proyectos\fabrica\LibraryApplication\Library.DAL\bin\Debug\net8.0\Library.DAL.deps.json
+C:\Users\davilladiego\Documents\proyectos\fabrica\LibraryApplication\Library.DAL\bin\Debug\net8.0\Library.DAL.runtimeconfig.json
+C:\Users\davilladiego\Documents\proyectos\fabrica\LibraryApplication\Library.DAL\bin\Debug\net8.0\Library.DAL.dll
+C:\Users\davilladiego\Documents\proyectos\fabrica\LibraryApplication\Library.DAL\bin\Debug\net8.0\Library.DAL.pdb
+C:\Users\davilladiego\Documents\proyectos\fabrica\LibraryApplication\Library.DAL\bin\Debug\net8.0\Library.Entity.dll
+C:\Users\davilladiego\Documents\proyectos\fabrica\LibraryApplication\Library.DAL\bin\Debug\net8.0\Library.Entity.pdb
+C:\Users\davilladiego\Documents\proyectos\fabrica\LibraryApplication\Library.DAL\obj\Debug\net8.0\Library.DAL.csproj.AssemblyReference.cache
+C:\Users\davilladiego\Documents\proyectos\fabrica\LibraryApplication\Library.DAL\obj\Debug\net8.0\Library.DAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\davilladiego\Documents\proyectos\fabrica\LibraryApplication\Library.DAL\obj\Debug\net8.0\Library.DAL.AssemblyInfoInputs.cache
+C:\Users\davilladiego\Documents\proyectos\fabrica\LibraryApplication\Library.DAL\obj\Debug\net8.0\Library.DAL.AssemblyInfo.cs
+C:\Users\davilladiego\Documents\proyectos\fabrica\LibraryApplication\Library.DAL\obj\Debug\net8.0\Library.DAL.csproj.CoreCompileInputs.cache
+C:\Users\davilladiego\Documents\proyectos\fabrica\LibraryApplication\Library.DAL\obj\Debug\net8.0\Library.DAL.csproj.CopyComplete
+C:\Users\davilladiego\Documents\proyectos\fabrica\LibraryApplication\Library.DAL\obj\Debug\net8.0\Library.DAL.dll
+C:\Users\davilladiego\Documents\proyectos\fabrica\LibraryApplication\Library.DAL\obj\Debug\net8.0\refint\Library.DAL.dll
+C:\Users\davilladiego\Documents\proyectos\fabrica\LibraryApplication\Library.DAL\obj\Debug\net8.0\Library.DAL.pdb
+C:\Users\davilladiego\Documents\proyectos\fabrica\LibraryApplication\Library.DAL\obj\Debug\net8.0\Library.DAL.genruntimeconfig.cache
+C:\Users\davilladiego\Documents\proyectos\fabrica\LibraryApplication\Library.DAL\obj\Debug\net8.0\ref\Library.DAL.dll

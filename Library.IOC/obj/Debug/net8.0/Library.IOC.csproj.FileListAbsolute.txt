@@ -1,0 +1,17 @@
+C:\Users\davilladiego\Documents\proyectos\fabrica\LibraryApplication\Library.IOC\bin\Debug\net8.0\Library.IOC.deps.json
+C:\Users\davilladiego\Documents\proyectos\fabrica\LibraryApplication\Library.IOC\bin\Debug\net8.0\Library.IOC.dll
+C:\Users\davilladiego\Documents\proyectos\fabrica\LibraryApplication\Library.IOC\bin\Debug\net8.0\Library.IOC.pdb
+C:\Users\davilladiego\Documents\proyectos\fabrica\LibraryApplication\Library.IOC\bin\Debug\net8.0\Library.DAL.dll
+C:\Users\davilladiego\Documents\proyectos\fabrica\LibraryApplication\Library.IOC\bin\Debug\net8.0\Library.Entity.dll
+C:\Users\davilladiego\Documents\proyectos\fabrica\LibraryApplication\Library.IOC\bin\Debug\net8.0\Library.DAL.pdb
+C:\Users\davilladiego\Documents\proyectos\fabrica\LibraryApplication\Library.IOC\bin\Debug\net8.0\Library.Entity.pdb
+C:\Users\davilladiego\Documents\proyectos\fabrica\LibraryApplication\Library.IOC\obj\Debug\net8.0\Library.IOC.csproj.AssemblyReference.cache
+C:\Users\davilladiego\Documents\proyectos\fabrica\LibraryApplication\Library.IOC\obj\Debug\net8.0\Library.IOC.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\davilladiego\Documents\proyectos\fabrica\LibraryApplication\Library.IOC\obj\Debug\net8.0\Library.IOC.AssemblyInfoInputs.cache
+C:\Users\davilladiego\Documents\proyectos\fabrica\LibraryApplication\Library.IOC\obj\Debug\net8.0\Library.IOC.AssemblyInfo.cs
+C:\Users\davilladiego\Documents\proyectos\fabrica\LibraryApplication\Library.IOC\obj\Debug\net8.0\Library.IOC.csproj.CoreCompileInputs.cache
+C:\Users\davilladiego\Documents\proyectos\fabrica\LibraryApplication\Library.IOC\obj\Debug\net8.0\Library.IOC.csproj.CopyComplete
+C:\Users\davilladiego\Documents\proyectos\fabrica\LibraryApplication\Library.IOC\obj\Debug\net8.0\Library.IOC.dll
+C:\Users\davilladiego\Documents\proyectos\fabrica\LibraryApplication\Library.IOC\obj\Debug\net8.0\refint\Library.IOC.dll
+C:\Users\davilladiego\Documents\proyectos\fabrica\LibraryApplication\Library.IOC\obj\Debug\net8.0\Library.IOC.pdb
+C:\Users\davilladiego\Documents\proyectos\fabrica\LibraryApplication\Library.IOC\obj\Debug\net8.0\ref\Library.IOC.dll

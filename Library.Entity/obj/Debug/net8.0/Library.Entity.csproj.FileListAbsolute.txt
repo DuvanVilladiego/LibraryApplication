@@ -1,0 +1,11 @@
+C:\Users\davilladiego\Documents\proyectos\fabrica\LibraryApplication\Library.Entity\bin\Debug\net8.0\Library.Entity.deps.json
+C:\Users\davilladiego\Documents\proyectos\fabrica\LibraryApplication\Library.Entity\bin\Debug\net8.0\Library.Entity.dll
+C:\Users\davilladiego\Documents\proyectos\fabrica\LibraryApplication\Library.Entity\bin\Debug\net8.0\Library.Entity.pdb
+C:\Users\davilladiego\Documents\proyectos\fabrica\LibraryApplication\Library.Entity\obj\Debug\net8.0\Library.Entity.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\davilladiego\Documents\proyectos\fabrica\LibraryApplication\Library.Entity\obj\Debug\net8.0\Library.Entity.AssemblyInfoInputs.cache
+C:\Users\davilladiego\Documents\proyectos\fabrica\LibraryApplication\Library.Entity\obj\Debug\net8.0\Library.Entity.AssemblyInfo.cs
+C:\Users\davilladiego\Documents\proyectos\fabrica\LibraryApplication\Library.Entity\obj\Debug\net8.0\Library.Entity.csproj.CoreCompileInputs.cache
+C:\Users\davilladiego\Documents\proyectos\fabrica\LibraryApplication\Library.Entity\obj\Debug\net8.0\Library.Entity.dll
+C:\Users\davilladiego\Documents\proyectos\fabrica\LibraryApplication\Library.Entity\obj\Debug\net8.0\refint\Library.Entity.dll
+C:\Users\davilladiego\Documents\proyectos\fabrica\LibraryApplication\Library.Entity\obj\Debug\net8.0\Library.Entity.pdb
+C:\Users\davilladiego\Documents\proyectos\fabrica\LibraryApplication\Library.Entity\obj\Debug\net8.0\ref\Library.Entity.dll

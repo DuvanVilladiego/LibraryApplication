@@ -1,0 +1,17 @@
+C:\Users\davilladiego\Documents\proyectos\fabrica\LibraryApplication\Library.BLL\bin\Debug\net8.0\Library.BLL.deps.json
+C:\Users\davilladiego\Documents\proyectos\fabrica\LibraryApplication\Library.BLL\bin\Debug\net8.0\Library.BLL.dll
+C:\Users\davilladiego\Documents\proyectos\fabrica\LibraryApplication\Library.BLL\bin\Debug\net8.0\Library.BLL.pdb
+C:\Users\davilladiego\Documents\proyectos\fabrica\LibraryApplication\Library.BLL\bin\Debug\net8.0\Library.DAL.dll
+C:\Users\davilladiego\Documents\proyectos\fabrica\LibraryApplication\Library.BLL\bin\Debug\net8.0\Library.Entity.dll
+C:\Users\davilladiego\Documents\proyectos\fabrica\LibraryApplication\Library.BLL\bin\Debug\net8.0\Library.DAL.pdb
+C:\Users\davilladiego\Documents\proyectos\fabrica\LibraryApplication\Library.BLL\bin\Debug\net8.0\Library.Entity.pdb
+C:\Users\davilladiego\Documents\proyectos\fabrica\LibraryApplication\Library.BLL\obj\Debug\net8.0\Library.BLL.csproj.AssemblyReference.cache
+C:\Users\davilladiego\Documents\proyectos\fabrica\LibraryApplication\Library.BLL\obj\Debug\net8.0\Library.BLL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\davilladiego\Documents\proyectos\fabrica\LibraryApplication\Library.BLL\obj\Debug\net8.0\Library.BLL.AssemblyInfoInputs.cache
+C:\Users\davilladiego\Documents\proyectos\fabrica\LibraryApplication\Library.BLL\obj\Debug\net8.0\Library.BLL.AssemblyInfo.cs
+C:\Users\davilladiego\Documents\proyectos\fabrica\LibraryApplication\Library.BLL\obj\Debug\net8.0\Library.BLL.csproj.CoreCompileInputs.cache
+C:\Users\davilladiego\Documents\proyectos\fabrica\LibraryApplication\Library.BLL\obj\Debug\net8.0\Library.BLL.csproj.CopyComplete
+C:\Users\davilladiego\Documents\proyectos\fabrica\LibraryApplication\Library.BLL\obj\Debug\net8.0\Library.BLL.dll
+C:\Users\davilladiego\Documents\proyectos\fabrica\LibraryApplication\Library.BLL\obj\Debug\net8.0\refint\Library.BLL.dll
+C:\Users\davilladiego\Documents\proyectos\fabrica\LibraryApplication\Library.BLL\obj\Debug\net8.0\Library.BLL.pdb
+C:\Users\davilladiego\Documents\proyectos\fabrica\LibraryApplication\Library.BLL\obj\Debug\net8.0\ref\Library.BLL.dll
