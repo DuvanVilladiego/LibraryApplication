@@ -17,7 +17,8 @@ namespace Library.BLL
             public const string InformationMessage = "Información adicional";
 
             //query errors
-            public const string NoFoundItems = "No se encontraron registros";
+            public const string NoFoundAuthorItems = "No se encontraron autores con ese Id";
+            public const string NoFoundBookItems = "No se encontraron libros con ese Id";
         }
     }
 

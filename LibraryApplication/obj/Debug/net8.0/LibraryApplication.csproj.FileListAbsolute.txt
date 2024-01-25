@@ -76,3 +76,4 @@ C:\Users\davilladiego\Documents\proyectos\fabrica\LibraryApplication\LibraryAppl
 C:\Users\davilladiego\Documents\proyectos\fabrica\LibraryApplication\LibraryApplication\bin\Debug\net8.0\Library.DAL.pdb
 C:\Users\davilladiego\Documents\proyectos\fabrica\LibraryApplication\LibraryApplication\bin\Debug\net8.0\Library.Entity.pdb
 C:\Users\davilladiego\Documents\proyectos\fabrica\LibraryApplication\LibraryApplication\obj\Debug\net8.0\LibraryApplication.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\davilladiego\Documents\proyectos\fabrica\LibraryApplication\LibraryApplication\obj\Debug\net8.0\LibraryApplication.sourcelink.json

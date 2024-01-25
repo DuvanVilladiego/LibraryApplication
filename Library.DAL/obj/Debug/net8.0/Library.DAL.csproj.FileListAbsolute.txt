@@ -15,3 +15,4 @@ C:\Users\davilladiego\Documents\proyectos\fabrica\LibraryApplication\Library.DAL
 C:\Users\davilladiego\Documents\proyectos\fabrica\LibraryApplication\Library.DAL\obj\Debug\net8.0\Library.DAL.pdb
 C:\Users\davilladiego\Documents\proyectos\fabrica\LibraryApplication\Library.DAL\obj\Debug\net8.0\Library.DAL.genruntimeconfig.cache
 C:\Users\davilladiego\Documents\proyectos\fabrica\LibraryApplication\Library.DAL\obj\Debug\net8.0\ref\Library.DAL.dll
+C:\Users\davilladiego\Documents\proyectos\fabrica\LibraryApplication\Library.DAL\obj\Debug\net8.0\Library.DAL.sourcelink.json

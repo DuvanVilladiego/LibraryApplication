@@ -1,32 +1,155 @@
 ﻿using Library.BLL.Books.Dtos;
+using Library.DAL.Repository.Implementation;
+using Library.DAL.Repository;
+using Library.Entity;
+using Library.BLL.Authors.Dtos;
 
 namespace Library.BLL.Books.Implementation
 {
     public class BooksServices : IBooksServices
     {
-        public BaseResponse<BooksDto> AddBook(BooksDto author)
+        private readonly IBooksRepository repository = new BooksRepository();
+        public BaseResponse<BookDto> AddBook(BookDto book)
         {
-            throw new NotImplementedException();
+            BaseResponse<BookDto> response = new BaseResponse<BookDto>();
+            try
+            {
+                BookTbl newBook = repository.Create(transformToEntity(book));
+                if (newBook != null)
+                {
+                    response.Status = true;
+                    response.Message = Constants.Messages.SuccessMessage;
+                }
+                else
+                {
+                    response.Status = false;
+                    response.Message = Constants.Messages.ErrorMessage;
+                }
+            }
+            catch (Exception)
+            {
+                response.Status = false;
+                response.Message = Constants.Messages.ErrorMessage;
+            }
+            return response;
         }
 
-        public BaseResponse<BooksDto> DeleteBook(BooksDto author)
+        public BaseResponse<List<BookDto>> GetBooks()
         {
-            throw new NotImplementedException();
+            BaseResponse<List<BookDto>> response = new BaseResponse<List<BookDto>>();
+            try
+            {
+                List<BookTbl> booksEntity = repository.GetAll();
+                if (booksEntity.Count > 0)
+                {
+                    List<BookDto> booksDTOs = new List<BookDto>();
+                    foreach (var bookEntity in booksEntity)
+                    {
+                        BookDto authorDTO = transformToDto(bookEntity);
+                        booksDTOs.Add(authorDTO);
+                    }
+                    response.Data = booksDTOs;
+                }
+                else
+                {
+                    response.Data = new List<BookDto>();
+                }
+                response.Status = true;
+                response.Message = Constants.Messages.SuccessMessage;
+            }
+            catch (Exception)
+            {
+                response.Status = false;
+                response.Message = Constants.Messages.ErrorMessage;
+            }
+            return response;
         }
 
-        public BaseResponse<BooksDto> GetABook(int id)
+        public BaseResponse<BookDto> GetABook(int id)
         {
-            throw new NotImplementedException();
+            BaseResponse<BookDto> response = new BaseResponse<BookDto>();
+            try
+            {
+                BookTbl book = repository.GetById(id);
+                if (book != null)
+                {
+                    response.Status = true;
+                    response.Message = Constants.Messages.SuccessMessage;
+                    response.Data = transformToDto(book); ;
+                }
+                else
+                {
+                    response.Status = false;
+                    response.Message = Constants.Messages.NoFoundBookItems;
+                }
+            }
+            catch (Exception)
+            {
+                response.Status = false;
+                response.Message = Constants.Messages.ErrorMessage;
+            }
+            return response;
         }
 
-        public BaseResponse<List<BooksDto>> GetBooks()
+        public BaseResponse<BookDto> UpdateBook(BookDto book)
         {
-            throw new NotImplementedException();
+            BaseResponse<BookDto> response = new BaseResponse<BookDto>();
+            try
+            {
+                BookTbl updateBook = repository.Update(transformToEntity(book));
+                response.Status = true;
+                response.Message = Constants.Messages.SuccessMessage;
+                response.Data = transformToDto(updateBook);
+            }
+            catch (Exception)
+            {
+                response.Status = false;
+                response.Message = Constants.Messages.ErrorMessage;
+            }
+            return response;
         }
 
-        public BaseResponse<BooksDto> UpdateBook(BooksDto author)
+        public BaseResponse<BookDto> DeleteBook(BookDto book)
         {
-            throw new NotImplementedException();
+            BaseResponse<BookDto> response = new BaseResponse<BookDto>();
+            try
+            {
+                BookTbl deletedBook = repository.Delete(transformToEntity(book));
+                response.Status = true;
+                response.Message = Constants.Messages.SuccessMessage;
+                response.Data = transformToDto(deletedBook);
+            }
+            catch (Exception)
+            {
+                response.Status = false;
+                response.Message = Constants.Messages.ErrorMessage;
+            }
+            return response;
         }
+
+        private BookDto transformToDto(BookTbl entity)
+        {
+            BookDto dto = new BookDto();
+            dto.BookId = entity.BookId;
+            dto.Title = entity.Title;
+            dto.YearPublished = entity.YearPublished;
+            dto.Genre = entity.Genre;
+            dto.NumPages = entity.NumPages;
+            dto.AuthorId = entity.AuthorId;
+            return dto;
+        }
+
+        private BookTbl transformToEntity(BookDto dto)
+        {
+            BookTbl entity = new BookTbl();
+            entity.BookId = dto.BookId;
+            entity.Title = dto.Title;
+            entity.YearPublished = dto.YearPublished;
+            entity.Genre = dto.Genre;
+            entity.NumPages = dto.NumPages;
+            entity.AuthorId = dto.AuthorId;
+            return entity;
+        }
+
     }
 }

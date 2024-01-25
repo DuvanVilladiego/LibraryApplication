@@ -15,3 +15,4 @@ C:\Users\davilladiego\Documents\proyectos\fabrica\LibraryApplication\Library.IOC
 C:\Users\davilladiego\Documents\proyectos\fabrica\LibraryApplication\Library.IOC\obj\Debug\net8.0\refint\Library.IOC.dll
 C:\Users\davilladiego\Documents\proyectos\fabrica\LibraryApplication\Library.IOC\obj\Debug\net8.0\Library.IOC.pdb
 C:\Users\davilladiego\Documents\proyectos\fabrica\LibraryApplication\Library.IOC\obj\Debug\net8.0\ref\Library.IOC.dll
+C:\Users\davilladiego\Documents\proyectos\fabrica\LibraryApplication\Library.IOC\obj\Debug\net8.0\Library.IOC.sourcelink.json

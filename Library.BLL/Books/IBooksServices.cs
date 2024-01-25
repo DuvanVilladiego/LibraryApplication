@@ -4,10 +4,10 @@ namespace Library.BLL.Books
 {
     public interface IBooksServices
     {
-        public BaseResponse<List<BooksDto>> GetBooks();
-        public BaseResponse<BooksDto> GetABook(int id);
-        public BaseResponse<BooksDto> AddBook(BooksDto author);
-        public BaseResponse<BooksDto> UpdateBook(BooksDto author);
-        public BaseResponse<BooksDto> DeleteBook(BooksDto author);
+        public BaseResponse<List<BookDto>> GetBooks();
+        public BaseResponse<BookDto> GetABook(int id);
+        public BaseResponse<BookDto> AddBook(BookDto author);
+        public BaseResponse<BookDto> UpdateBook(BookDto author);
+        public BaseResponse<BookDto> DeleteBook(BookDto author);
     }
 }

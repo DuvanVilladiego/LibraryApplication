@@ -3,6 +3,10 @@ using Library.BLL;
 using Library.BLL.Books;
 using Library.BLL.Books.Dtos;
 using Library.BLL.Books.Implementation;
+using Library.BLL.Authors.Dtos;
+using Library.BLL.Authors.Implementation;
+using Library.BLL.Authors;
+using Azure;
 
 namespace LibraryApplication.Controllers
 {
@@ -10,6 +14,7 @@ namespace LibraryApplication.Controllers
     [Route("[controller]")]
     public class BooksController : ControllerBase
     {
+        private IAuthorsServices authorsServices = new AuthorsServices();
         private IBooksServices booksServices = new BooksServices();
         private readonly ILogger<AuthorsController> _logger;
 
@@ -22,74 +27,63 @@ namespace LibraryApplication.Controllers
         [Route("getAll")]
         public IActionResult GetAll()
         {
-            BaseResponse<List<BooksDto>> response = booksServices.GetBooks();
-            if (response.Status)
-            {
-                return Ok(response);
-            }
-            else
-            {
-                return BadRequest(response);
-            }
+            BaseResponse<List<BookDto>> response = booksServices.GetBooks();
+            return response.Status ? Ok(response) : BadRequest(response);
         }
 
         [HttpGet]
         [Route("{id}")]
-        public IActionResult GetAnAuthor(string id)
+        public IActionResult GetABook(string id)
         {
-            BaseResponse<BooksDto> response = booksServices.GetABook(Int32.Parse(id));
-            if (response.Status)
-            {
-                return Ok(response);
-            }
-            else
-            {
-                return BadRequest(response);
-            }
+            BaseResponse<BookDto> response = booksServices.GetABook(Int32.Parse(id));
+            return response.Status ? Ok(response) : BadRequest(response);
         }
 
         [HttpPost]
-        [Route("addAuthor")]
-        public IActionResult AddAuthor([FromBody] BooksDto book)
+        [Route("addBook")]
+        public IActionResult AddBook([FromBody] BookDto book)
         {
-            BaseResponse<BooksDto> response = booksServices.AddBook(book);
-            if (response.Status)
+            BaseResponse<AuthorDTO> authorResponse = authorsServices.GetAnAuthor(book.AuthorId);
+            if (authorResponse.Status)
             {
-                return Ok(response);
+                BaseResponse<BookDto> response = booksServices.AddBook(book);
+                return response.Status ? Ok(response) : BadRequest(response);
             }
             else
             {
-                return BadRequest(response);
+                return BadRequest(authorResponse);
             }
         }
 
         [HttpPut]
         [Route("update")]
-        public IActionResult UpdateAuthor([FromBody] BooksDto book)
+        public IActionResult UpdateBook([FromBody] BookDto book)
         {
-            BaseResponse<BooksDto> response = booksServices.UpdateBook(book);
-            if (response.Status)
+            BaseResponse<BookDto> bookResponse = booksServices.GetABook(book.BookId);
+            if (bookResponse.Status)
             {
-                return Ok(response);
+                BaseResponse<BookDto> response = booksServices.UpdateBook(book);
+                return response.Status ? Ok(response) : BadRequest(response);
             }
             else
             {
-                return BadRequest(response);
+                return BadRequest(bookResponse);
             }
         }
 
         [HttpDelete]
         [Route("delete")]
-        public IActionResult DeleteAuthor([FromBody] BooksDto book)
+        public IActionResult DeleteBook([FromBody] BookDto book)
         {
-            BaseResponse<BooksDto> response = booksServices.DeleteBook(book);
-            if (response.Status)
+            BaseResponse<BookDto> bookResponse = booksServices.GetABook(book.BookId);
+            if (bookResponse.Status)
             {
-                return Ok(response);
+                BaseResponse<BookDto> response = booksServices.DeleteBook(book);
+                return response.Status ? Ok(response) : BadRequest(response);
             }
             else
             {
-                return BadRequest(response);
+                return BadRequest(bookResponse);
             }
         }
     }

@@ -23,14 +23,7 @@ namespace LibraryApplication.Controllers
         public IActionResult GetAll()
         {
             BaseResponse<List<AuthorDTO>> response = authorsServices.GetAuthors();
-            if (response.Status)
-            {
-                return Ok(response);
-
-            } else
-            {
-                return BadRequest(response);
-            }
+            return response.Status ? Ok(response) : BadRequest(response);
         }
 
         [HttpGet]
@@ -38,14 +31,7 @@ namespace LibraryApplication.Controllers
         public IActionResult GetAnAuthor(string id)
         {
             BaseResponse<AuthorDTO> response = authorsServices.GetAnAuthor(Int32.Parse(id));
-            if (response.Status)
-            {
-                return Ok(response);
-            }
-            else
-            {
-                return BadRequest(response);
-            }
+            return response.Status ? Ok(response) : BadRequest(response);
         }
 
         [HttpPost]
@@ -53,28 +39,22 @@ namespace LibraryApplication.Controllers
         public IActionResult AddAuthor([FromBody] AuthorDTO author)
         {
             BaseResponse<AuthorDTO> response = authorsServices.AddAuthor(author);
-            if (response.Status)
-            {
-                return Ok(response);
-            }
-            else
-            {
-                return BadRequest(response);
-            }
+            return response.Status ? Ok(response) : BadRequest(response);
         }
 
         [HttpPut]
         [Route("update")]
         public IActionResult UpdateAuthor([FromBody] AuthorDTO author)
         {
-            BaseResponse<AuthorDTO> response = authorsServices.UpdateAuthor(author);
-            if (response.Status)
+            BaseResponse<AuthorDTO> authorResponse = authorsServices.GetAnAuthor(author.AuthorId);
+            if (authorResponse.Status)
             {
-                return Ok(response);
+                BaseResponse<AuthorDTO> response = authorsServices.UpdateAuthor(author);
+                return response.Status ? Ok(response) : BadRequest(response);
             }
             else
             {
-                return BadRequest(response);
+                return BadRequest(authorResponse);
             }
         }
 
@@ -82,14 +62,15 @@ namespace LibraryApplication.Controllers
         [Route("delete")]
         public IActionResult DeleteAuthor([FromBody] AuthorDTO author)
         {
-            BaseResponse<AuthorDTO> response = authorsServices.DeleteAuthor(author);
-            if (response.Status)
+            BaseResponse<AuthorDTO> authorResponse = authorsServices.GetAnAuthor(author.AuthorId);
+            if (authorResponse.Status)
             {
-                return Ok(response);
+                BaseResponse<AuthorDTO> response = authorsServices.DeleteAuthor(author);
+                return response.Status ? Ok(response) : BadRequest(response);
             }
             else
             {
-                return BadRequest(response);
+                return BadRequest(authorResponse);
             }
         }
 

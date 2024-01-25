@@ -4,15 +4,15 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Library.DAL.Repository.Implementation
 {
-    internal class BooksRepository : IBooksRepository
+    public class BooksRepository : IBooksRepository
     {
-        public BooksRepository(LibrarydbContext dbContext)
+        private readonly DbContextOptions<LibrarydbContext> options;
+        private readonly LibrarydbContext _dbContext;
+        public BooksRepository()
         {
             options = new DbContextOptionsBuilder<LibrarydbContext>().UseSqlServer("Server=localhost;Database=LIBRARYDB;Trusted_Connection=True;TrustServerCertificate=True;Encrypt=False").Options;
             _dbContext = new LibrarydbContext(options);
         }
-        private readonly DbContextOptions<LibrarydbContext> options;
-        private readonly LibrarydbContext _dbContext;
 
         public List<BookTbl> GetAll()
         {
@@ -28,16 +28,10 @@ namespace Library.DAL.Repository.Implementation
 
         public BookTbl Create(BookTbl entity)
         {
-            try
-            {
-                BookTbl response = _dbContext.Set<BookTbl>().Add(entity).Entity;
-                _dbContext.SaveChangesAsync();
-                return response;
-            }
-            catch (Exception)
-            {
-                throw;
-            }
+            BookTbl response = _dbContext.Set<BookTbl>().Add(entity).Entity;
+            _dbContext.SaveChangesAsync();
+            return response;
+
         }
         public BookTbl GetById(int id)
         {
@@ -55,7 +49,9 @@ namespace Library.DAL.Repository.Implementation
         {
             try
             {
-                return _dbContext.Set<BookTbl>().Update(entity).Entity;
+                BookTbl update = _dbContext.Set<BookTbl>().Update(entity).Entity;
+                _dbContext.SaveChangesAsync();
+                return update;
             }
             catch (Exception)
             {
@@ -67,7 +63,9 @@ namespace Library.DAL.Repository.Implementation
         {
             try
             {
-                return _dbContext.Set<BookTbl>().Remove(entity).Entity;
+                BookTbl deleted = _dbContext.Set<BookTbl>().Remove(entity).Entity;
+                _dbContext.SaveChangesAsync();
+                return deleted;
             }
             catch (Exception)
             {

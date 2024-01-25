@@ -76,12 +76,12 @@ namespace Library.BLL.Authors.Implementation
                 {
                     response.Status = true;
                     response.Message = Constants.Messages.SuccessMessage;
-                    response.Data = transformToDto(author); ;
+                    response.Data = transformToDto(author);
                 }
                 else
                 {
                     response.Status = false;
-                    response.Message = Constants.Messages.NoFoundItems;
+                    response.Message = Constants.Messages.NoFoundAuthorItems;
                 }
             }
             catch (Exception)
@@ -97,7 +97,10 @@ namespace Library.BLL.Authors.Implementation
             BaseResponse<AuthorDTO> response = new BaseResponse<AuthorDTO>();
             try
             {
-
+                AuthorTbl updateAuthor = repository.Update(transformToEntity(author));
+                response.Status = true;
+                response.Message = Constants.Messages.SuccessMessage;
+                response.Data = transformToDto(updateAuthor);
             }
             catch (Exception)
             {
@@ -112,7 +115,10 @@ namespace Library.BLL.Authors.Implementation
             BaseResponse<AuthorDTO> response = new BaseResponse<AuthorDTO>();
             try
             {
-
+                AuthorTbl deletedAuthor = repository.Delete(transformToEntity(author));
+                response.Status = true;
+                response.Message = Constants.Messages.SuccessMessage;
+                response.Data = transformToDto(deletedAuthor);
             }
             catch (Exception)
             {
@@ -136,6 +142,7 @@ namespace Library.BLL.Authors.Implementation
         private AuthorTbl transformToEntity(AuthorDTO entity)
         {
             AuthorTbl dto = new AuthorTbl();
+            dto.AuthorId = entity.AuthorId;
             dto.FullName = entity.FullName;
             dto.BirthDate = entity.BirthDate;
             dto.BirthTown = entity.BirthTown;

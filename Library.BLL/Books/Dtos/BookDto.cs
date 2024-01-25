@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Library.BLL.Books.Dtos
 {
-    public class BooksDto
+    public class BookDto
     {
         public int BookId { get; set; }
 
@@ -21,6 +21,5 @@ namespace Library.BLL.Books.Dtos
 
         public int AuthorId { get; set; }
 
-        public virtual AuthorTbl? Author { get; set; }
     }
 }

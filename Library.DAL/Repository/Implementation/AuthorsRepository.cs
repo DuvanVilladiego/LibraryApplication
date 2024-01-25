@@ -59,7 +59,9 @@ namespace Library.DAL.Repository.Implementation
         {
             try
             {
-                return _dbContext.Set<AuthorTbl>().Update(entity).Entity;
+                AuthorTbl update = _dbContext.Set<AuthorTbl>().Update(entity).Entity;
+                _dbContext.SaveChanges();
+                return update;
             }
             catch (Exception)
             {
@@ -71,7 +73,9 @@ namespace Library.DAL.Repository.Implementation
         {
             try
             {
-                return _dbContext.Set<AuthorTbl>().Remove(entity).Entity;
+                AuthorTbl deleted = _dbContext.Set<AuthorTbl>().Remove(entity).Entity;
+                _dbContext.SaveChanges();
+                return deleted;
             }
             catch (Exception)
             {
