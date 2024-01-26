@@ -14,5 +14,7 @@ public partial class BookTbl
 
     public int AuthorId { get; set; }
 
+    public string FrontPage { get; set; }
+
     public virtual AuthorTbl? Author { get; set; }
 }
