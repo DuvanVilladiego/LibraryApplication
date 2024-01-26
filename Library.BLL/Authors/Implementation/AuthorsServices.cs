@@ -8,7 +8,12 @@ namespace Library.BLL.Authors.Implementation
 {
     public class AuthorsServices : IAuthorsServices
     {
-        private readonly IAuthorsRepository repository = new AuthorsRepository();
+        private readonly IAuthorsRepository repository;
+
+        public AuthorsServices(IAuthorsRepository repository)
+        {
+            this.repository = repository;
+        }
 
         public BaseResponse<AuthorDTO> AddAuthor(AuthorDTO author)
         {

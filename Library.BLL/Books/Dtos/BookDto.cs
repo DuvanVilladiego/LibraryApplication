@@ -21,5 +21,7 @@ namespace Library.BLL.Books.Dtos
 
         public int AuthorId { get; set; }
 
+        public string FrontPage { get; set; }
+
     }
 }

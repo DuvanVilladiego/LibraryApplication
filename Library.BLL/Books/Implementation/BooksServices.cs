@@ -1,14 +1,18 @@
 ﻿using Library.BLL.Books.Dtos;
-using Library.DAL.Repository.Implementation;
 using Library.DAL.Repository;
 using Library.Entity;
-using Library.BLL.Authors.Dtos;
 
 namespace Library.BLL.Books.Implementation
 {
     public class BooksServices : IBooksServices
     {
-        private readonly IBooksRepository repository = new BooksRepository();
+        private readonly IBooksRepository repository;
+
+        public BooksServices(IBooksRepository repository)
+        {
+            this.repository = repository;
+        }
+
         public BaseResponse<BookDto> AddBook(BookDto book)
         {
             BaseResponse<BookDto> response = new BaseResponse<BookDto>();
@@ -136,6 +140,7 @@ namespace Library.BLL.Books.Implementation
             dto.Genre = entity.Genre;
             dto.NumPages = entity.NumPages;
             dto.AuthorId = entity.AuthorId;
+            dto.FrontPage = entity.FrontPage;
             return dto;
         }
 
@@ -148,6 +153,7 @@ namespace Library.BLL.Books.Implementation
             entity.Genre = dto.Genre;
             entity.NumPages = dto.NumPages;
             entity.AuthorId = dto.AuthorId;
+            entity.FrontPage = dto.FrontPage;
             return entity;
         }
 
