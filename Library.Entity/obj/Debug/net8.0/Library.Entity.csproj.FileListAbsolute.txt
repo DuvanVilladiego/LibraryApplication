@@ -9,3 +9,4 @@ C:\Users\davilladiego\Documents\proyectos\fabrica\LibraryApplication\Library.Ent
 C:\Users\davilladiego\Documents\proyectos\fabrica\LibraryApplication\Library.Entity\obj\Debug\net8.0\refint\Library.Entity.dll
 C:\Users\davilladiego\Documents\proyectos\fabrica\LibraryApplication\Library.Entity\obj\Debug\net8.0\Library.Entity.pdb
 C:\Users\davilladiego\Documents\proyectos\fabrica\LibraryApplication\Library.Entity\obj\Debug\net8.0\ref\Library.Entity.dll
+C:\Users\davilladiego\Documents\proyectos\fabrica\LibraryApplication\Library.Entity\obj\Debug\net8.0\Library.Entity.sourcelink.json
